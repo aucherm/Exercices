@@ -6,6 +6,6 @@ if (number >= 0 && number <= 10) {
     }
 
 } else {
-console.log("Le nombre saisi doit être inclu entre 0 et 10.")
+console.log("Le nombre saisi doit être compris entre 0 et 10.");
 
 }
