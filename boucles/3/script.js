@@ -1,4 +1,4 @@
-let number = parseInt(prompt("Veuillez saisir un 0 et 10 :"));
+let number = parseInt(prompt("Veuillez saisir un chiffre entier entre 0 et 10 :"));
 
 if (number >= 0 && number <= 10) {
     for (let i = number; i >=0; i--){
