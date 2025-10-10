@@ -107,13 +107,20 @@ function averagePagesByGenre() {
 
     books.forEach(function (book) {
         if (!genreStats[book.genre]) {
-            genreStats[book.genre] = { totalPages: 0, count:0 }
+            genreStats[book.genre] = { totalPages: 0, count: 0 }
         }
         genreStats[book.genre].totalPages += book.pages;
         genreStats[book.genre].count += 1;
     }
     )
+
+    let averages = {};
+    for (const genre in genreStats) {
+        averages[genre] = Math.round(genreStats[genre].totalPages / genreStats[genre].count);
+    }
+    return averages
 }
+console.log(averagePagesByGenre());
 
 
 //3 Trouver le livre le plus récent
