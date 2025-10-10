@@ -63,22 +63,34 @@ const books = [
 ];
 
 //1 Trouver tous les livres d'une autrice donné (Alice Martin)
-function findBooksByAuthor(author) {
+/* function findBooksByAuthor(author) {
 
-    for (i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
         if (books[i].author === author) {
             console.log(books[i].title);
         }
     }
 }
-findBooksByAuthor("Alice Martin");
+findBooksByAuthor("Alice Martin");  */
+
+function findBooksbyAuthor(author) {
+    let booksFind = [];
+    for (let i = 0; i < books.length; i++) {
+        if (books[i].author == author) {
+            booksFind.push(books[i].title);
+            return booksFind;
+        }
+    }
+}
+console.log(findBooksbyAuthor("Alice Martin"));
+
 
 //2 Calculer la moyenne des pages par genre
-function averagePagesByGenre(genre) {
+/* function averagePagesByGenre(genre) {
     let moyenne = 0; //départ de la recherche, on débute à 0
     let nb = 0; //départ de la recherche, on débute à 0
 
-    for (i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
         if (books[i].genre === (genre)) {
             moyenne += books[i].pages;
             nb++;
@@ -88,14 +100,28 @@ function averagePagesByGenre(genre) {
 }
 
 averagePagesByGenre("programming");
-averagePagesByGenre("art");
+averagePagesByGenre("art"); */
+
+function averagePagesByGenre() {
+    let genreStats = {};
+
+    books.forEach(function (book) {
+        if (!genreStats[book.genre]) {
+            genreStats[book.genre] = { totalPages: 0, count:0 }
+        }
+        genreStats[book.genre].totalPages += book.pages;
+        genreStats[book.genre].count += 1;
+    }
+    )
+}
+
 
 //3 Trouver le livre le plus récent
 function newestBook() {
     let temp = 0;
     let result;
 
-    for (i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
         if (books[i].year > temp) {
             temp = books[i].year;
             result = books[i].title;
@@ -109,7 +135,7 @@ newestBook();
 //4 Créer une liste unique de tou.te.s les auteur.ice.s
 function listOfAllAuthors(author) {
     let list = []; //création d'une liste vide qu'on rempliera
-    for (i = 0; i < books.length; i++) {
+    for (let i = 0; i < books.length; i++) {
         list.push(books[i].author);
     }
     console.log(list);
@@ -118,14 +144,13 @@ listOfAllAuthors();
 
 
 //5 Grouper les livres par genre
-function booksByGenre(genre){
-  for(i = 0; i < books.length; i++){
-    if(books[i].genre === (genre))
-        {
-      console.log(books[i].title)
+function booksByGenre(genre) {
+    for (let i = 0; i < books.length; i++) {
+        if (books[i].genre === (genre)) {
+            console.log(books[i].title)
+        }
     }
-  }
 }
 
 booksByGenre("programming")
-booksByGenre("art")
+booksByGenre("art") 

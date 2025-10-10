@@ -46,33 +46,54 @@ const students = {
     }
 };
 
-
+ 
 //1 Calculer la moyenne de chaque étudiant·e
-/* 
+  for (const id in students) {
+    const student = students[id]; // Récupère chaque étudiant
+    const grades = student.grades; // Tableau des notes
+    const average = grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
+
+    console.log(`${student.name} → Moyenne : ${average}`);
+}  
+
+
+//2 Trouver les étudiant·es d'une filière donnée
+function getStudentsByMajor(major) {
+    const result = [];
+    for (const key in students) {
+        if (students[key].major === major) {
+            result.push(students[key].name);
+            console.log(`${major} → ${students[key].name}`)
+        }
+    }
+    return result;
+}
+
+getStudentsByMajor("Computer Science");
+getStudentsByMajor("Physics");
+getStudentsByMajor("Mathematics");
+
+
+//3 Identifier l'étudiante avec la meilleure moyenne
+let bestStudent = null;   // création d'une variable pour mémoriser l'étudiant avec la meilleure moyenne
+let bestAverage = 0;   //création d'une variable pour stocker la meilleure moyenne
 
 for (const id in students) {
     const student = students[id]; // Récupère chaque étudiant
     const grades = student.grades; // Tableau des notes
-
-    // Calcul de la moyenne
     const average = grades.reduce((sum, grade) => sum + grade, 0) / grades.length;
 
-    console.log(`${student.name} → Moyenne : ${average}`);
-}
- */
-
-//2 Trouver les étudiant·es d'une filière donnée
-/* function findByMajor() {
-
-    for (i = 0; i < students.length; i++) {
-        const student = students[id]; // Récupère chaque étudiant
-        const major = students.major; // Tableau les filières
-        if (students[i].major === (major)) {
-            console.log(students[i].major)
-        }
+    if (average > bestAverage) {
+        bestAverage = average;
+        bestStudent = student;
     }
 }
-findByMajor("Computer Science");
-findByMajor("Physics");
-findByMajor("Mathematics");
- */
+
+console.log(`L'étudiant.e avec la meilleure moyenne est ${bestStudent.name}`) 
+
+
+//5 Ajouter une note à un.e étudiant.e
+
+ students.A001.grades.push(20);
+
+ console.log( students.A001.grades);
