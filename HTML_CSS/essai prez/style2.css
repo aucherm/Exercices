@@ -1,10 +1,11 @@
-:root {
+/* :root {
     --background: #FAF4E8;
     --title: #2E3066;
 
-}
+} */
 
 body {
+ background-color: #FAE8EB;
     font-family: Quicksand;
 }
 
@@ -19,6 +20,7 @@ body {
 
 .head {
     font-size: 10vh;
+    background-color: #f7b18e;
     color: #2E3066;
     text-align: center;
     padding: 30px;
