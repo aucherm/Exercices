@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+
+</head>
+
+<body>
+
+    <div class="head">
+        <img src="images/logo.svg" alt="Logo de la marque" id="logo">
+    </div>
+
+    <div class="grid">
+        <div class="image">
+            <picture>
+
+                <source srcset="images/hero-desktop.jpg" media=" (min-width: 768px)">
+                <img src="images/hero-mobile.jpg" alt="Femme portant une chemise orange" id="femme"
+                    class="image-responsive">
+
+            </picture>
+        </div>
+
+        <div class="text">
+            <div class="A">WE'RE </div>
+            <div class="B"></strong>COMING SOON</strong></div>
+            <div class="C">
+                Hello fellow shoppers! We're currently building our new fashion store.
+                Add your email below to stay up-to-date with announcements and our launch deals.
+            </div>
+        </div>
+    </div>
+
+    <form id="myForm">
+
+        <li>
+            <input type="email" id="mail" name="user_mail" placeholder="E-mail Address" />
+            <button type="submit">Submit</button>
+        </li>
+
+
+
+    </form>
+
+    <p id="message" style="color: red;"></p>
+
+
+
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>

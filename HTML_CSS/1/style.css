@@ -1,11 +1,5 @@
 @import url('<https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap>');
 
-/* @media (max-width: 768px) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-} 
- */
 
 body {
     margin: auto;
@@ -34,7 +28,14 @@ h2 {
 img {
     margin: 0.2rem;
 }
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 1rem auto;
+}
 
+/*avec grid
 main {
     width: 80vw;
     margin: 1rem auto;
@@ -42,3 +43,4 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 }
+

@@ -1,0 +1,127 @@
+body {
+    background-color: #FFF9F9;
+}
+
+
+@font-face {
+    font-family: 'Josefin';
+    src: url(Josefin.ttf);
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.head {
+    margin: 35px;
+    max-width: 20%;
+}
+
+body {
+    font-size: 14px;
+}
+
+.text {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.img.femme {
+    max-width: 100%;
+    width: 600px;
+    display: block;
+}
+
+@font-face {
+    font-family: 'Josefin';
+    src: url(Josefin.ttf);
+    text-align: center;
+}
+
+.A {
+    font-family: Josefin;
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+    color: #E5C8CA;
+}
+
+.B {
+    font-family: Josefin;
+    font-size: 40px;
+    text-align: center;
+    padding: 30px;
+    color: #59322E;
+}
+
+.C {
+    font-family: Josefin;
+    font-size: 15px;
+    text-align: center;
+    padding: 30px;
+    color: #E5C8CA;
+}
+
+
+
+@media (min-width: 768px) {
+    .grid {
+        flex-direction: row;
+        align-items: center;
+        height:100vh;
+    }
+
+    .image {
+        flex: 1;
+        order: 2;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .text{
+        flex:1;
+        order:1;
+        text-align: left;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+    }
+
+    .A {
+        font-family: Josefin;
+        font-size: 40px;
+        text-align: center;
+        padding: 10px;
+        color: #E5C8CA;
+    }
+
+    .B {
+        font-family: Josefin;
+        font-size: 40px;
+        text-align: center;
+        padding: 10px;
+        color: #59322E;
+    }
+
+    .C {
+        font-family: Josefin;
+        font-size: 15px;
+        text-align: center;
+        padding: 10px;
+        color: #E5C8CA;
+    }
+
+    .mail {
+    background-color: blue;
+    }
+}

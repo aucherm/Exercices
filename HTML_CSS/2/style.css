@@ -1,0 +1,44 @@
+main {
+  display: flex;
+  margin: 1em;
+  gap: 1em;
+}
+
+header {
+  background-color: grey;
+  min-height: 20vh;
+  margin: 1em;
+}
+
+aside {
+  background-color: grey;
+  min-height: 80vh;
+  min-width: 50%;
+  flex: 1;
+}
+
+.content {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1;
+}
+
+.title {
+  background-color: grey;
+  min-height: 20vh;
+}
+
+.square {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  min-height: 20vh;
+  background-color: grey;
+}
