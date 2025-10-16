@@ -92,7 +92,6 @@ body {
 
 .cta-button:hover {
   background-color: #f7b18e;
-  /* Couleur au survol */
   transform: scale(1.05);
 }
 
@@ -123,7 +122,6 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  /* espace entre les cartes */
   padding: 30px;
 }
 
@@ -131,7 +129,6 @@ html {
   position: relative;
   width: 100%;
   padding-top: 130%;
-  /* rend la carte carrée */
   border-radius: 10px;
 }
 
@@ -192,8 +189,62 @@ html {
   display: grid;
   grid-column: 1;
   text-align: center;
-  
 
+}
 
+@media (max-width: 768px) {
+  .head {
+    font-size: 5vh;
+  }
 
+  .container {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .picture,
+  .myself {
+    width: 40%;
+    max-width: none;
+  }
+
+  .myself {
+    width: 100vw;
+    height: auto;
+    max-width: 450px;
+    flex-shrink: 0;
+    font-size: 20px;
+    text-align: center;
+
+  }
+
+  .iam {
+    font-size: 30px;
+
+  }
+
+  #portfolio {
+    height: auto;
+  }
+
+  .workstitle {
+    display: block;
+    width: 100vw;
+    height: auto;
+    flex-shrink: 0;
+    font-size: 5vh;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box
+  }
+
+  .grille-projets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-button {
+    margin: 20px auto;
+  }
 }
