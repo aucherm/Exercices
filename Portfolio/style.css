@@ -35,6 +35,8 @@ body {
   padding: 20px;
   box-sizing: border-box;
   flex-shrink: 0;
+  background-image: url("pictures/desktop.png");
+  background-size: cover;
 
 }
 
@@ -197,54 +199,56 @@ html {
     font-size: 5vh;
   }
 
-  .container {
-    width: 100vw;
-    height: auto;
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .picture,
-  .myself {
-    width: 40%;
-    max-width: none;
-  }
+.container {
+  width: 100vw;
+  height: auto;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("pictures/mobile.png");
+  background-size: cover;
+}
 
-  .myself {
-    width: 100vw;
-    height: auto;
-    max-width: 450px;
-    flex-shrink: 0;
-    font-size: 20px;
-    text-align: center;
+.picture,
+.myself {
+  width: 40%;
+  max-width: none;
+}
 
-  }
+.myself {
+  width: 100vw;
+  height: auto;
+  max-width: 450px;
+  flex-shrink: 0;
+  font-size: 20px;
+  text-align: center;
 
-  .iam {
-    font-size: 30px;
+}
 
-  }
+.iam {
+  font-size: 30px;
 
-  #portfolio {
-    height: auto;
-  }
+}
 
-  .workstitle {
-    display: block;
-    width: 100vw;
-    height: auto;
-    flex-shrink: 0;
-    font-size: 5vh;
-    text-align: center;
-    padding: 30px;
-    box-sizing: border-box
-  }
+#portfolio {
+  height: auto;
+}
 
-  .grille-projets {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.workstitle {
+  display: block;
+  width: 100vw;
+  height: auto;
+  flex-shrink: 0;
+  font-size: 5vh;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box
+}
 
-  .cta-button {
-    margin: 20px auto;
-  }
+.grille-projets {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cta-button {
+  margin: 20px auto;
 }
