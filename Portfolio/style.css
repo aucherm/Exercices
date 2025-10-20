@@ -16,8 +16,8 @@ body {
     url(font/Quicksand/Quicksand_Light.otf.woff);
 }
 
-.head {
-  font-size: 10vh;
+.header {
+  font-size: 70px;
   background-color: #f7b18e;
   color: #2E3066;
   text-align: center;
@@ -48,8 +48,7 @@ body {
   width: 40%;
   height: auto;
   max-width: 450px;
-  flex-shrink: 0;
-  /* empêche Flexbox de rétrécir la div */
+  flex-shrink: 0;/* empêche Flexbox de rétrécir la div */
   align-self: center;
 }
 
@@ -218,7 +217,7 @@ img:focus {
 }
 
 @media (max-width: 768px) {
-  .head {
+  .header {
     font-size: 5vh;
   }
 
