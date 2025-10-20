@@ -209,10 +209,8 @@ html {
 a:focus,
 button:focus,
 img:focus {
-  outline: 3px solid #f7b18e;
-  /* contour visible */
-  outline-offset: 4px;
-  /* espace entre l'élément et le contour */
+  outline: 3px solid #f7b18e; /* contour visible */
+  outline-offset: 4px; /* espace entre l'élément et le contour */
   border-radius: 6px;
 }
 
