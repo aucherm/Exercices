@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Macondo', cursive;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+
+  .left,
+  .right {
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: #4F3B17;
+  }
+
+  .left {
+    background-color: #e4bd73;
+    text-align: center;
+    padding: 2rem
+  }
+
+  .right {
+    background-image: url(background.png);
+    background-size: cover;
+  }
+}

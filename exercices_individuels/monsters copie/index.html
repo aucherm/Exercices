@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Whack That Troll !</title>
+
+
+
+</head>
+
+<body>
+    <div id="container"> 
+        
+        <div class="left">
+            <h1>Whack That Troll! </h1>
+
+            <p>As you wander peacefully through the forest, the rustle of leaves is suddenly broken by a deep growl. A
+                troll steps out from behind the trees, blocking your path.</p>
+                <p>You’ll have to fight it — taking turns to attack until the creature runs out of health points. You can
+                strike it up to six times, but be carefull, the troll will fight back !</p>
+            <p>Ready ? Go !</p>
+
+
+            <p><span id="monster-pv"></span></p>
+            <p>Player : <span id="player-num">1</span></p>
+
+            <p>How many times will you attack?</p>
+
+            <input type="number" id="damage-input" placeholder="1 to 6" min="1" max="6">
+            <button id="attack-btn">Fight !</button>
+            <button id="restart-btn" style="display:none;">Restart</button>
+
+            <p id="message"></p>
+        </div>
+        <div class="right" id="right-panel" >
+
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

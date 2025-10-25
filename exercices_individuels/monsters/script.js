@@ -1,4 +1,4 @@
-// Étape 1 — Fonction d’attaque
+/* // Étape 1 — Fonction d’attaque
 // But : créer la fonction qui applique des dégâts aux PV du monstre.
 
 // Entrées : remainingPv , damages
@@ -62,4 +62,39 @@ play(); // appeller la fonction
 
 
 // Étape 4 — Deux joueurs (alternance de tours)
-// But : gérer l’alternance entre 2 joueurs.
+// But : gérer l’alternance entre 2 joueurs. */
+ 
+
+function attack(remainingPv, damages) {
+    return remainingPv - damages;
+}
+
+function askDamages(player) {
+    let playerPrompt = "";
+
+    do {
+        playerPrompt = Number.parseInt(prompt(`Player ${player}, how many damages would you like to inflige ? (1-6)`));
+    } while (playerPrompt < 0 || playerPrompt > 7 || isNaN(playerPrompt));
+    return playerPrompt;
+}
+
+function play() {
+    let monsterPv = 50; // on initialise les points de vie de monstre
+    let player = 1; // on initialise le joueur actif
+
+    while (monsterPv > 0) {
+        let damages = askDamages(player);
+        monsterPv = attack(monsterPv, damages);
+        if ((player = 1)) {
+        } else {
+        }
+        // player = 1 ? 2 : 1; version ternaire
+        if (monsterPv <= 0) {
+            alert(`🎉Player ${player} won !`);
+            break;
+        }
+    }
+}
+
+play();
+
