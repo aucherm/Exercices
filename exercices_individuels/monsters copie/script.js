@@ -3,7 +3,7 @@ function attack(monsterHp, damages) {
 }
 
 let monsterHp = 35;
-let playerHp = 25;
+let playerHp = 20;
 let player = 1;
 
 
@@ -27,12 +27,12 @@ function askDamages(player) {
 function trollAttack() {
     const trollDamage = Math.floor(Math.random() * 6) + 1; // dégâts du troll : 1 à 6
     playerHp -= trollDamage;
-    messageDisplay.textContent += `The troll hits Player ${player}: ${trollDamage} time(s) !`;
+    messageDisplay.textContent += `The troll hits Player ${player}: ${trollDamage} time(s)!`;
 
     if (playerHp <= 0) {
         playerHp = 0;
-        messageDisplay.textContent += `\n💀 Player ${player} has been defeated! Game over.`;
-        attackBtn.disabled = true;
+        messageDisplay.textContent += `\n💀 Player ${player} has been defeated!`;
+        attackBtn.style.display = "none"; // 👈 cache le bouton Attack
         restartBtn.style.display = "inline-block"; // 👈 on montre le bouton Restart
         return true; // indique que le joueur est mort
     }
@@ -58,7 +58,7 @@ function playTurn() {
     //si le troll est vaincu
     if (monsterHp <= 0) {
         messageDisplay.textContent = `🎉 Player ${player} has won !`;
-        attackBtn.disabled = true;
+        attackBtn.style.display = "none"; // 👈 cache le bouton Attack
         restartBtn.style.display = "inline-block"; // 👈 on montre le bouton Restart
 
 
@@ -96,13 +96,14 @@ function playTurn() {
 function restartGame() {
     // Réinitialiser les variables
     monsterHp = 35;
-    playerHp = 25;
+    playerHp = 20;
     player = 1;
 
     // Réinitialiser l'affichage
     playerDisplay.textContent = player;
     messageDisplay.textContent = "New game started! 🐉";
     damageInput.value = "";
+
 
     const rightPanel = document.getElementById("right-panel");
     rightPanel.style.backgroundImage = "url('background.png')"; // 👈 ton image de base

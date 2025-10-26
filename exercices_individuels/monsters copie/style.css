@@ -31,3 +31,25 @@ body {
     background-size: cover;
   }
 }
+
+#attack-btn, #restart-btn {
+  background-color: #4F3B17;
+  color: #f8f6f3;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+#damage-input {
+  background-color: #4F3B17;
+  color: #f8f6f3;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+}
