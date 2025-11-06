@@ -122,4 +122,16 @@ function decode(text) {
     return array.join("") // transformer le tableau en chaine de caractères
 }
 
+function encodeText() {
+            const input = document.getElementById("textInput").value;
+            const result = encode(input);
+            document.getElementById("morseResult").textContent = result || "Aucun résultat";
+        }
+
+        function decodeText() {
+            const input = document.getElementById("morseInput").value;
+            const result = decode(input);
+            document.getElementById("textResult").textContent = result || "Aucun résultat";
+        }
+
 console.log(decode("-.-. . -.-. .. / . ... - / ..- -. / - . ... -"))

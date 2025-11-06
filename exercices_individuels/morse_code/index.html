@@ -5,11 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morse code</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-<h1>Morse Code/h1>
+    <div class="container">
+        <h1>🔤 Traducteur Morse 📡</h1>
+
+        <div class="section">
+            <h2>Texte → Morse</h2>
+            <textarea id="textInput" placeholder="Entrez votre texte ici..."></textarea>
+            <button onclick="encodeText()">Traduire en Morse</button>
+            <div class="result" id="morseResult"></div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="section">
+            <h2>Morse → Texte</h2>
+            <textarea id="morseInput"
+                placeholder="Entrez votre code morse ici... (utilisez / pour les espaces)"></textarea>
+            <button onclick="decodeText()">Traduire en Texte</button>
+            <div class="result" id="textResult"></div>
+        </div>
+    </div>
 </body>
 
 </html>
