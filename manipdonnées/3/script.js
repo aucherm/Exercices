@@ -1,19 +1,27 @@
 const fs = require('fs');
-const filepath = 'data.json';
+const filepath = "manipdonnées/3/data.json";
 
-const content = fs.readFileSync(filepath, {encoding: 'utf8', flag: 'r'});
+
+const content = fs.readFileSync(filepath, { encoding: 'utf8', flag: 'r' });
 const data = JSON.parse(content);
+// write your code bellow
 
-// 1
+// 1 type de données
+console.log("Type of data : ", typeof data)
 
-/* import data from './data.json' assert { type: 'json' };
+// 2 afficher élément 0
+console.log(data[0])
 
-console.log(typeof data); // "object"
-console.log(Array.isArray(data)); // true
- */
+// 3 nombre d'objets dans le tableau
+console.log("nombre d'objets dans le tableau", data.length);
 
-// 2
-import data from './data.json' assert { type: 'json' };
+// 4 informations de la quatrième candidate
+console.log("informations quatrième objet", data[4]);
 
-// Afficher le premier objet
-console.log(data[0]);
+//5 l’âge moyen des candidates
+let sommeAge = 0
+for (let i = 0; i < data.length; i++) {
+  sommeAge += data[i].age
+}
+const avg = sommeAge / data.length
+console.log("Moyenne d'age des candidates : ", avg) 

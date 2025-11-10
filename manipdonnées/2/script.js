@@ -1,8 +1,8 @@
 const obj = {
-  "candidate": "Le Filip",
-  "age": 29,
-  "city": "Paris",
-  "region": "Île-de-France"
+	"candidate": "Le Filip",
+	"age": 29,
+	"city": "Paris",
+	"region": "Île-de-France"
 }
 
 const data = [
@@ -31,3 +31,9 @@ console.log(obj.candidate);
 
 // 2
 data.forEach(item => console.log(item.candidate));
+
+//
+
+for (let i = 0; i < data.length; i++)
+	console.log(data[i].candidate)
+
