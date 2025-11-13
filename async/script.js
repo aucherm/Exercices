@@ -2,6 +2,8 @@
 
 // Exercice 2 : Gérer l'état de chargement : ajouter message ("container.innerHTML")
 
+
+//méthode avec innerHTML
 async function fetchOffers() {
 
     const container = document.getElementById("offers-container");
