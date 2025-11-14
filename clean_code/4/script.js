@@ -105,3 +105,5 @@ async function fetchAllWeather() {
 }
 
 fetchAllWeather();
+
+//petite info, l'API open meteo n'est plus disponible donc aucune donnée ne s'affiche dans le html
