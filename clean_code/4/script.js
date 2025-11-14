@@ -74,11 +74,11 @@ Ce qu'il faut faire pour refactorer
 */
 
 const cities = [
-    { name: "Paris", lat: 48.8534, lon: 2.3488 },
-    { name: "Lyon", lat: 45.75, lon: 4.85 },
-    { name: "Nantes", lat: 47.2173, lon: -1.5534 },
-    { name: "Marseille", lat: 43.3, lon: 5.4 },
-    { name: "Lille", lat: 50.633333, lon: 3.066667 },
+    { name: "paris", lat: 48.8534, lon: 2.3488 },
+    { name: "lyon", lat: 45.75, lon: 4.85 },
+    { name: "nantes", lat: 47.2173, lon: -1.5534 },
+    { name: "marseille", lat: 43.3, lon: 5.4 },
+    { name: "lille", lat: 50.633333, lon: 3.066667 },
 ];
 
 async function updateWeatherForCity(city) {
@@ -106,4 +106,3 @@ async function fetchAllWeather() {
 
 fetchAllWeather();
 
-//petite info, l'API open meteo n'est plus disponible donc aucune donnée ne s'affiche dans le html
