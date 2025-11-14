@@ -68,8 +68,8 @@ fetchWeather();
 Ce qu'il faut faire pour refactorer 
 
 1. Créer une constante cities qui regroupe toutes les villes dans un tableau avec nom, latitude et longitutde
-2. Créer une fonction fupdateWeatherForCity(city) qui appelle l'API météo, récupère les données et met à jour le DOM
-3. Créer une fonction fetchAllWeather() qui parcourt cities, appelle fetchCity pour chaque ville
+2. Créer une fonction updateWeatherForCity(city) qui appelle l'API météo, récupère les données et met à jour le DOM
+3. Créer une fonction fetchAllWeather() qui parcourt cities, appelle updateWatherForCity pour chaque ville
 4. Appeler fetchAllWeather()
 */
 
