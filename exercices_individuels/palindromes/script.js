@@ -14,7 +14,7 @@ function maxDaysInMonth(month, year) {
             if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) { // Une année est bissextile si divisible par 4 mais pas par 100, ou divisible par 400
                 return 29; // année bisextille
             } else {
-                return 28; //année non bisextille
+                return 28; //année non bisextile
             }
         }
         return 0; // mois invalide
