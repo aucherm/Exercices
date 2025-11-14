@@ -11,8 +11,8 @@ function maxDaysInMonth(month, year) {
 
         if (month === 2) { // février
 
-            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) { // Une année est bissextile si divisible par 4 mais pas par 100, ou divisible par 400
-                return 29; // année bisextille
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) { // Une année est bisextile si divisible par 4 mais pas par 100, ou divisible par 400
+                return 29; // année bisextile
             } else {
                 return 28; //année non bisextile
             }
@@ -43,9 +43,7 @@ function isValidDate(dateString) {
 
 // Étape 2 : créer une fonction pour vérifier si la date est un palindrome
 
-/*function isPalindrome(dateString) {
-
-    if (!isValidDate(dateString)) return false; // vérifie que la date est valide
+/* function isPalindrome(dateString) {
 
     const digitsOnly = dateString.replace(/\//g, ''); // supprime les / pour ne garder que les chiffres
 
@@ -56,7 +54,15 @@ function isValidDate(dateString) {
 console.log(isPalindrome("12/02/2021")); // true
 console.log(isPalindrome("11/02/2019")); // false */
 
+// Étape 4 : refactorer isPlaindrome
 
+function isPalindrome(dateString) {
+    const digits = dateString.replace(/\/+/g, "");
+    return digits.split("").reverse().join("") === digits;
+}
+
+console.log(isPalindrome("12/02/2021")); // true
+console.log(isPalindrome("11/02/2019")); // false 
 
 // Étape 3 : créer une fonction donnant les prochaines dates palindromes
 
@@ -84,23 +90,5 @@ function getNextPalindromes(x) {
 console.log(getNextPalindromes(8));
 
 
-// Étape 4 : refactorer isPlaindrome
 
-function isPalindrome(string) {
-    const simpleString = string.toLowerCase().replace(/\s/g, ''); // enlève les espaces et met tout en minuscules
-    const reversed = simpleString.split('').reverse().join(''); // crée la version inversée de la chaîne
-    return simpleString === reversed; // compare les deux versions
-}
-
-// Nouvelle fonction pour vérifier un palindrome au format date
-function isDatePalindrome(dateString) {
-    // Vérifie d'abord si la date est valide (format DD/MM/YYYY)
-    if (!isValidDate(dateString)) return false;
-
-    // Supprime les "/" pour ne garder que les chiffres
-    const digitsOnly = dateString.replace(/\//g, '');
-
-    // Appelle la fonction générale isPalindrome
-    return isPalindrome(digitsOnly);
-}
 
