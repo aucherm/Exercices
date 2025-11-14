@@ -1,4 +1,8 @@
-const fetchWeather = async () => {
+/* 
+
+CODE DE BASE
+
+    const fetchWeather = async () => {
     const LAT_PARIS = 48.8534;
     const LONG_PARIS = 2.3488;
 
@@ -57,10 +61,17 @@ const fetchWeather = async () => {
 }
 
 fetchWeather();
+*/
 
-----------------------
-----------------------
 
+/*
+Ce qu'il faut faire pour refactorer 
+
+1. Créer une constante cities qui regroupe toutes les villes dans un tableau avec nom, latitude et longitutde
+2. Créer une fonction fetchCity Weather(city) qui appelle l'API météo, récupère les données et met à jour le DOM
+3. Créer une fonction fetchAllWeather() qui parcourt cities, appelle fetchCity pour chaque ville
+4. Appeler fetchAllWeather()
+*/
 
 const cities = [
     { name: "Paris", lat: 48.8534, lon: 2.3488 },
@@ -69,3 +80,28 @@ const cities = [
     { name: "Marseille", lat: 43.3, lon: 5.4 },
     { name: "Lille", lat: 50.633333, lon: 3.066667 },
 ];
+
+async function updateWeatherForCity(city) {
+    try {
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,rain`;
+        const response = await fetch(url);
+        const data = await response.json();
+
+        document.getElementById(`pluie_${city.name}`).innerHTML =
+            `<strong>${data.current.rain}</strong>`;
+
+        document.getElementById(`degres_${city.name}`).innerHTML =
+            `<strong>${data.current.temperature_2m}</strong>`;
+
+    } catch (error) {
+        console.error(`Erreur lors de la récupération pour ${city.name} :`,)
+    }
+}
+
+async function fetchAllWeather() {
+    for (const city of cities) {
+        await updateWeatherForCity(city);
+    }
+}
+
+fetchAllWeather();
