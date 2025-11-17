@@ -8,3 +8,4 @@ function displayInfo(name: string, score: number, active: boolean): string {
 
 console.log(displayInfo(firstName, score, isActive)); 
 console.log("TypeScript fonctionne !");
+console.log("sos");
