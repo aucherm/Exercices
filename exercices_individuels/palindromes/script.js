@@ -66,11 +66,11 @@ console.log(isPalindrome("11/02/2019")); // false
 
 // Étape 3 : créer une fonction donnant les prochaines dates palindromes
 
-function getNextPalindromes(x) {
-    const palindromes = []; //création d'un tableau vide qui contiendra les dates palindromes
+function getNextPalindromes(count) {
+    let palindromes = []; //création d'un tableau vide qui contiendra les dates palindromes
     let date = new Date(); //  création d'un objet représentant la date et l'heure actuelles au moment de l'appel
 
-    while (palindromes.length < x) {
+    while (palindromes.length < count) {
         date.setDate(date.getDate() + 1); // avance d'un jour
 
         const day = String(date.getDate()).padStart(2, '0'); // récupère le jour, le convertie en chaîne, ajoute un 0 à gauche si besoin
