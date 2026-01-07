@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <h1>Mastermind 4 couleurs</h1>
+    <div id="board">
+  <div class="slot"></div>
+  <div class="slot"></div>
+  <div class="slot"></div>
+  <div class="slot"></div>
+</div>
+
+<div id="colors">
+  <button style="background:red" onclick="addColor('red')"></button>
+  <button style="background:blue" onclick="addColor('blue')"></button>
+  <button style="background:green" onclick="addColor('green')"></button>
+  <button style="background:yellow" onclick="addColor('yellow')"></button>
+  <button style="background:orange" onclick="addColor('orange')"></button>
+  <button style="background:purple" onclick="addColor('purple')"></button>
+  <button style="background:pink" onclick="addColor('pink')"></button>
+  <button style="background:brown" onclick="addColor('brown')"></button>
+</div>
+
+<button onclick="playTurn()">Valider</button>
+<button onclick="resetGuess()">Effacer</button>
+
+    <p id="message"></p>
+    <p id="attemptsLeft"></p>
+</body>
+<script src="script.js" defer></script>
+
+</html>
