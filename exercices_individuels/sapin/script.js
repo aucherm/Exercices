@@ -76,9 +76,23 @@ function afficherEtage(hauteur, pointe_offset, espacement) {
     for (let i = 1 + pointe_offset; i <= hauteur + pointe_offset; i++) {
         let marge = ' '.repeat(espacement);
         let espaces = ' '.repeat(n - i);
-        let etoiles = '*'.repeat(i - 1);
 
-        resultat += marge + espaces + '/' + etoiles + "|" + etoiles + '\\' + "\n";
+        let interieur = "";
+        let largeur = i - 1;
+
+        for (let k = 0; k < largeur; k++) {
+            let r = Math.random();
+
+            if (r < 0.15) {
+                interieur += 'o';
+            } else if (r < 0.30) {
+                interieur += '+';
+            } else {
+                interieur += '*';
+            }
+        }
+
+        resultat += marge + espaces + '/' + interieur + "|" + interieur + '\\' + "\n";
     }
 }
 
@@ -111,51 +125,4 @@ afficherRectangle(2, 3, centre - Math.floor(3 / 2));
 document.getElementById("resultat").innerHTML = resultat;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* function afficherSapin(etages, hauteurEtage) {
-    let largeurMax = etages + hauteurEtage;
-
-    resultat += ' '.repeat(largeurMax + 1) + '+' + '\n';
-
-    resultat += ' '.repeat(largeurMax) + '/|\\' + '\n';
-
-    for (let e = 1; e <= etages; e++) {
-        let baseEtage = e - 1;
-
-        for (let h = 1; h <= hauteurEtage; h++) {
-            if (e === 1 && h === 0) continue;
-            let largeur = baseEtage + h;
-            let espaces = ' '.repeat(largeurMax - largeur);
-            let etoiles = '*'.repeat(largeur);
-
-            resultat += espaces + '/' + etoiles + '|' + etoiles + '\\' + '\n';
-        }
-    }
-}
-
-afficherSapin(3, 3);
- */
 
