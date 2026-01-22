@@ -24,6 +24,7 @@ function afficherTriangleDroite(n) {
 }
 afficherTriangleDroite(5);
 
+
 function afficherTriangleGauche(n) {
     for (let i = 1; i <= n; i++) {
         let espaces = ' '.repeat(n - i);
@@ -53,7 +54,42 @@ function afficherPointSapin(n) {
 afficherPointSapin(4);
 
 
+/* function afficherEtage(hauteur, pointe_offset) {
+    let n = hauteur + pointe_offset;
+
+    for (let i = 1 + pointe_offset; i <= hauteur + pointe_offset; i++) {
+        let espaces = ' '.repeat(n - i);
+        let etoiles = '*'.repeat(i - 1);
+
+        resultat += espaces + '/' + etoiles + "|" + etoiles + '\\' + "\n";
+    }
+}
+
+afficherEtage(3, 0);
+afficherEtage(3, 1);
+afficherEtage(3, 2); */
+
+ 
+function afficherEtage(hauteur, pointe_offset, espacement) {
+    let n = hauteur + pointe_offset;
+
+    for (let i = 1 + pointe_offset; i <= hauteur + pointe_offset; i++) {
+        let marge = ' '.repeat(espacement);
+        let espaces = ' '.repeat(n - i);
+        let etoiles = '*'.repeat(i - 1);
+
+        resultat += marge + espaces + '/' + etoiles + "|" + etoiles + '\\' + "\n";
+    }
+}
+
+afficherEtage(3, 0, 3);
+afficherEtage(3, 1, 2);
+afficherEtage(3, 2, 1);
+afficherEtage(3, 3, 0);
+
+
 document.getElementById("resultat").innerHTML = resultat;
+
 
 
 
