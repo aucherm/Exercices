@@ -1,0 +1,35 @@
+header {
+background-color : green;
+}
+
+main {
+border: 1px solid orange;
+}
+
+#nom {
+    background-color: blueviolet;
+}
+
+.fieldset {
+    border: none;
+}
+
+label > span {
+    color: red;
+}
+
+label {
+    color: green;
+    & > span { 
+        color: blue;
+    }
+}
+
+label.toto {
+    color: coral;
+}
+
+input + label {
+    background-color: aqua;
+}
+

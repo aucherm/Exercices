@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple HTML qui claque</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation">
+            <ul>
+                <li><a href="#titre">Titre</a></li>
+                <li><a href="#contenu">Contenu</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="titre">Bienvenue sur mon site !!</h1>
+        <p id="contenu">Ceci est un exemple</p>
+
+        <form>
+            <label class="toto" for="">Nom <span>*</span></label>
+            <input id="nom" type="text" placeholder="Ex: Martin" required />
+            <fieldset>
+                <legend>Choisir type d'habitation</legend>
+                <input id="maison" type="checkbox" />
+                <label for="maison">Maison</label>
+                <input type="checkbox" id="appartment" />
+                <label for="appartment">Appartement</label>
+                <input type="text" />
+            </fieldset>
+            <button type="submit">Envoyer</button>
+        </form>
+
+
+
+        <h1 id="titre">Bienvenue sur mon site !!</h1>
+        <p id="contenu">Ceci est un exercice</p>
+
+        <form>
+            <label for="email">Email *</label>
+            <input id="name" type="email" placeholder="ex: martin@test.fr" required />
+            <label for="password">Mot de passe *</label>
+            <input id="password" type="password" placeholder="votre mot de passe" minlength="8" required />
+
+            <fieldset class="fieldset">
+                <legend>Coordonnées</legend>
+                <label for="adress">Adresse : </label>
+                <input type="text" id="adress" placeholder="ex: 1 rue des Magnolias" />
+                <label for="zipcode">Code Postal :</label>
+                <input type="text" pattern="[0-9]" id="zipcode" placeholder="ex: 44000" inputmode="numeric" />
+            </fieldset>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
+
+
+    <footer id="footer" role="contentinfo">
+        <nav>
+            <ul>
+                <li><a href="#">Plan du site</a></li>
+                <li><a href="#">Mentions Légales</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
