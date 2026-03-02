@@ -1,25 +1,46 @@
 const emails = [
-    "lina@mail.com",
-    "sarahmail.com",
-    "aline@site",
-    "morad @mail.com",
-    "lucie@domain.fr",
-    "paulette@mail .com",
-    "contact@entreprise.org"
+  "lina@mail.com",
+  "sarahmail.com",
+  "aline@site",
+  "morad @mail.com",
+  "lucie@domain.fr",
+  "paulette@mail .com",
+  "contact@entreprise.org"
 ];
 
-function getValidEmails(emails) {
+ function getValidEmails(emails) {
+    const result = [];
 
-    const result = []
-
-    for (const address of emails) {
-        if (address.includes("@") && address.includes(".") && !address.includes(" ")) {
-            result.push(address)
-        }
+for (const address of emails) {
+    if (address.includes("@") && address.includes(".") && !address.includes(" ")) {
+        result.push(address)
     }
-
-    return result;
+    
+ } return result ;
 }
+console.log(getValidEmails(emails))
 
-console.log(getValidEmails(emails));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
