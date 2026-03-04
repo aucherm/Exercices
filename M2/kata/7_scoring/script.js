@@ -23,3 +23,44 @@ function calculateScore(actions) {
     return score;
 }
 console.log(calculateScore(actions));
+
+
+function calculateScoreSwitch(actions) {
+    let score = 0;
+
+    for (const { type, points } of actions) {
+        switch (type) {
+            case "win":
+            case "bonus":
+                score += points;
+                break;
+            case "penalty":
+                score -= points;
+                break;
+        }
+
+        if (score < 0) {
+            score = 0;
+        }
+    }
+    return score;
+}
+console.log(calculateScoreSwitch(actions));
+
+
+const calculateScoreReduceSwitch = (actionArray) =>
+    actionArray.reduce((score, { type, points }) => {
+        switch (type) {
+            case "win":
+            case "bonus":
+                return score + points;
+            case "penalty":
+                return score - points;
+            default:
+                return score; 
+        }
+    }, 0);
+
+console.log("score final:", calculateScoreReduceSwitch(actions));
+
+
