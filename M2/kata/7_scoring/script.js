@@ -12,12 +12,14 @@ function calculateScore(actions) {
     for (const status of actions) {
         if (status.type === "win" || status.type === "bonus") {
             score += status.points;
-        } else if (status.type = "penalty") {
+        } else if (status.type === "penalty") {
             score -= status.points;
         }
 
-        if (score < 0) score = 0;
+        
     }
+    if (score < 0) score = 0;
+    
     return score;
 }
 console.log(calculateScore(actions));
