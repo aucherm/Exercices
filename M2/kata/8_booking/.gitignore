@@ -1,6 +1,0 @@
-# Dossier node
-node_modules/
-
-# fichiers système
-.DS_Store
-Thumbs.db
